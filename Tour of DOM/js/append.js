@@ -14,6 +14,7 @@ sectionContainer.appendChild(li2);
 
 // Create dynamic section and added elements
 
+// step 1
 const mainContainer = document.getElementById('main-container');
 
 const section = document.createElement('section');
@@ -51,3 +52,22 @@ dressSection.innerHTML = `
 </ul>
 `
 mainContainer.appendChild(dressSection);
+
+
+const myFavourite = document.createElement('section');
+myFavourite.innerHTML = `
+<h1>My Favourit Food</h1>
+<h2>My Favourit Food</h2>
+ <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse saepe quis illum obcaecati <br> inventore ratione minima, facilis necessitatibus nam mollitia velit 
+    possimus quidem at repellendus sit provident assumenda. Dicta illum dolore sapiente.
+</p>
+<ul>
+    <li>Vegitables</li>
+    <li>Mosur Dal</li>
+    <li>Alu Vorta</li>
+</ul>
+`
+
+
+mainContainer.appendChild(myFavourite);
