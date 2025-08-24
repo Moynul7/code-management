@@ -64,4 +64,4 @@ updatedButton.addEventListener('click', function(){
     const displayText = document.getElementById('input-text-display');
     displayText.innerText = inputText;
     inputField.value = '';
-})
+});
