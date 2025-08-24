@@ -65,3 +65,33 @@ updatedButton.addEventListener('click', function(){
     displayText.innerText = inputText;
     inputField.value = '';
 });
+
+// Delete button disable and enable js event
+
+const textField = document.getElementById('text-field');
+        const btnDelete = document.getElementById('btn-delete');
+        // Focus
+        // textField.addEventListener('focus', function () {
+        //     console.log('Focus Me');
+        // })
+        // //blur
+        // textField.addEventListener('blur', function () {
+        //     console.log('Blur Me');
+        // });
+        //Keyup
+        textField.addEventListener('keyup', function(event) {
+            const text = event.target.value;
+            if (text.toUpperCase() === 'Delete'.toUpperCase()) {
+                btnDelete.removeAttribute('disabled');
+            }
+            else {
+                btnDelete.setAttribute('disabled', true);
+            }
+            console.log(text);
+        });
+
+        btnDelete.addEventListener('click', function(){
+            const secInfo = document.getElementById('sec-info');
+            secInfo.style.display = 'none';
+            textField.value = '';
+        });
