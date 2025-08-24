@@ -25,6 +25,46 @@
         <button onclick="eventHandler()">Handler Event Click Function</button>
         <button id="change-listner">Event Listner Click Function</button>
     </section>
+    <section>
+        <h2 id="sec-info">Explore More Event</h2>
+        <button id="btn-event">Click Event</button><br><br>
+        <input id="text-field" type="text">
+        <button id="btn-delete" disabled>Delete</button>
+    </section>
+
+    <script>
+        const btnEvent = document.getElementById('btn-event');
+        const textField = document.getElementById('text-field');
+        const btnDelete = document.getElementById('btn-delete');
+        btnEvent.addEventListener('mousemove', function(){
+            console.log('click Me');
+        });
+        // Focus
+        // textField.addEventListener('focus', function () {
+        //     console.log('Focus Me');
+        // })
+        // //blur
+        // textField.addEventListener('blur', function () {
+        //     console.log('Blur Me');
+        // });
+        //Keyup
+        textField.addEventListener('keyup', function(event) {
+            const text = event.target.value;
+            if (text.toUpperCase() === 'Delete'.toUpperCase()) {
+                btnDelete.removeAttribute('disabled');
+            }
+            else {
+                btnDelete.setAttribute('disabled', true);
+            }
+            console.log(text);
+        });
+
+        btnDelete.addEventListener('click', function(){
+            const secInfo = document.getElementById('sec-info');
+            secInfo.style.display = 'none';
+            textField.value = '';
+        });
+    </script>
 
     <script src="js/event.js"></script>
 </body>
